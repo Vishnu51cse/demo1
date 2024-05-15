@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+    .dem{
+      background-color:white;
+      width: 1200px;
+      height:500px;
+      position: absolute;
+      top:250px;
+      left:250px;
+      border-radius:4px;
+
+    }
+    .dem p{
+      font-family: 'Arial', sans-serif; /* Specify font family */
+      font-size: 16px; /* Set font size */
+      line-height: 1.6;
+    }
+    h1{
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body style="background-color: #B3E5FC;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+  <h1>About Srivari Industries</h1>
+  <div class="dem">
+    <p>Welcome to Srivari Industries, your trusted partner in plastic bottle manufacturing. With a legacy of excellence spanning <span class="highlight">[number of years]</span>, we have established ourselves as a leading provider of high-quality plastic bottles for various industries.</p>
+    <p>At Srivari Industries, we specialize in the design, development, and production of a wide range of plastic bottles. From beverage bottles to pharmaceutical containers, we offer innovative solutions to meet the diverse needs of our clients.</p>
+    <p>Our state-of-the-art manufacturing facilities are equipped with cutting-edge technology and adhere to the highest quality standards. With a skilled team of professionals and a commitment to excellence, we ensure that every bottle we produce meets stringent quality control measures.</p>
+    <p>As a customer-centric company, we prioritize your satisfaction above all else. We work closely with our clients to understand their unique requirements and provide customized solutions tailored to their specific needs. Our dedication to customer service has earned us a reputation for reliability and integrity in the industry.</p>
+    <p>At Srivari Industries, we understand the importance of sustainability. That's why we are committed to eco-friendly manufacturing practices and strive to minimize our environmental footprint. We utilize recyclable materials and implement sustainable processes to ensure that our operations are environmentally responsible.</p>
+    <p>But our commitment goes beyond just manufacturing plastic bottles. We are dedicated to making a positive impact on the communities we serve. Through various corporate social responsibility initiatives, we support local causes and contribute to the betterment of society.</p>
+    <p>Whether you're a small startup or a multinational corporation, Srivari Industries is here to fulfill your plastic bottle needs. Contact us today to learn more about our products and services, and let us help you find the perfect packaging solution for your business.</p>
+    <p>Thank you for choosing Srivari Industries as your partner in plastic bottle manufacturing. We look forward to serving you and exceeding your expectations.</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+  {% include "ecom/footer.html" %}
+</body>
+
+
+</html>
